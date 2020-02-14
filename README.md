@@ -18,8 +18,21 @@ Docker and Kubernetes
     - kubectl apply -f client-node-port.yaml
 # List running Pods on local machine
      - kubectl get pods
+# List running Pods on local machine with ip inside virtual machine
+     - kubectl get pods -o wide
 # List running Services on local machine
     - kubectl get services
+# List running Deployments on local machine
+    - kubectl get deployments
+# Get detailed info about object
+     - kubectl describe <object type> <object name>
+     - kubectl describe pod client-pod
+     - kubectl describe deployment client-deployment
+     - kubectl describe service client-node-port
+# Delete a running object
+     - kubectl delete -f <config file>
+     - kubectl delete -f client-pod.yaml
+     - kubectl delete -f client-node-port.yaml
 # Minikube Ip on local machine
     - minikube ip
 ## 192.168.99.100 (example)
